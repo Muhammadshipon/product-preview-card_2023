@@ -1,0 +1,98 @@
+:root{
+  --priFont:'Fraunces', serif;
+  --secFont: 'Montserrat', sans-serif;
+
+  --darkcyancolor: hsl(158, 36%, 37%);
+--CreamColor: hsl(30, 38%, 92%);
+
+--VerydarkBlueColor: hsl(212, 21%, 14%);
+--Darkgrayishblue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+}
+html,
+body{margin: o;height: 100%;
+padding: 0;
+background: var(--CreamColor);
+display: flex;
+justify-content: center;
+align-items: center;
+box-sizing: border-box;
+}
+
+.card {width: 600px;
+  height: auto;
+background: var(--White);
+display: flex;
+border-radius: 10px 10px;
+box-sizing: border-box;
+}
+
+/*img style*/
+
+img{max-width:100%;
+  height: auto;}
+
+  .card_img{flex-basis: 50%;}
+
+  .card_body{flex-basis: 50%;}
+
+  .card_img img.desktop{
+    border-radius: 10px 0 0 10px;
+  }
+  .card_img img.mobile{
+    border-radius: 10px 10px 0 0;
+    display: none;
+  }
+
+  /*Card body Style*/
+  .card_body{padding: 35px;
+  box-sizing: border-box;}
+
+  .card_body h2{font-size: 32px;
+  font-family: var(--priFont);
+  margin-top: -5px;color: var(--VerydarkBlueColor);
+font-weight: 500;}
+
+.card_body h5{color: var(--Darkgrayishblue);
+letter-spacing: 5px;text-transform: uppercase;
+font-family: var(--secFont);font-size: 10px;
+font-weight: 200;}
+
+.card_body p{font-family: var(--secFont);
+font-size: 14px;color: var(--Darkgrayishblue);
+line-height: 20px;}
+
+.card_body p.price{ font-size: 30px;
+font-family: var(--priFont);
+color: var(--darkcyancolor);
+position: relative;}
+
+.card_body p.price span{margin-left: 20px;
+font-size: 14px;font-family: var(--secFont);
+color: var(--Darkgrayishblue);
+text-decoration: line-through;margin-top: -0.5px;
+position: absolute;}
+
+.card_body button{width: 100%; padding: 10px;
+  border-radius: 10px;background: var(--darkcyancolor);
+color: var(--White);border: none;
+position: relative;}
+.card_body button img{margin-left: -20px;
+margin-bottom: -0.5px;
+position: absolute;}
+
+/*Responsive*/
+@media only screen and (max-width:600px)
+{.card{width: 90%;;
+flex-direction: column;
+margin-top: 20px;}
+body{align-items: flex-start;}
+
+.card_img img.desktop{display: none;
+  
+}
+.card_img img.mobile{
+  border-radius: 10px 10px 0 0;
+  display: block;
+}
+}
